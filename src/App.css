@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 150px;
+    background-color: #101010;
+    border-bottom: 1px solid gray;
+}
+.header-cont{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+main{
+    padding: 60px;
+    background-color: #101010;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.movie-cont{
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 20px;
+}
+
+.box{
+    width: 100%;
+}
+
+.mov-pic{
+    width: 250px;
+}
