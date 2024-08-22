@@ -1,10 +1,10 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useState } from "react";
+import React from "react";
 
-const SearchContext = createContext("")
+const SearchContext = React.createContext("")
 
 function SearchProvider(props) {
     const [search, setSearch] = useState("")
-    console.log(search);
     
     return(
         <div>
@@ -13,6 +13,9 @@ function SearchProvider(props) {
             </SearchContext.Provider>
         </div>
     )
+}
+function useGlobalContext() {
+    return useContext(SearchContext)
 }
 
 export {SearchContext, SearchProvider}

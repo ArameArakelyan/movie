@@ -6,20 +6,17 @@ import Layout from './Layout';
 import Home from './pages/homepage';
 import Search from './pages/searchpage';
 import { SearchProvider } from './use';
+import { BrowserRouter as Router } from 'react-router-dom';
+import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
     <SearchProvider>
-    <Routes>
-      <Route path='/' element={<Layout/>}>
-      <Route index element={<Home/>}/>
-      <Route path='/?search' element={<Search/>} />
-      </Route>
-    </Routes>
+    <Router>
+      <App/>
+    </Router>
     </SearchProvider>
-    </BrowserRouter>
   </React.StrictMode>
 );
 

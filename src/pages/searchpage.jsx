@@ -3,12 +3,16 @@ import useFetch, { api_key, main_url } from "../lib";
 import "../App.css"
 import Box from "../components/box";
 import { SearchContext } from "../use";
+import { useParams } from "react-router-dom";
+
 
 function Search() {
-    const {search} = useContext(SearchContext)
-    const searchurl = main_url + "/search/movie?" +api_key +"&query="+ "aven"
-    const {data} = useFetch(searchurl,"GET")
-    console.log(data);
+    console.log(1235435);
+    const {searchtext} = useParams()
+    console.log(main_url +"/search/movie?" +api_key +"&query="+searchtext);
+    
+    const {data} = useFetch(searchtext,"GET")
+    data.map((movie)=>console.log(movie))
     return(
         <main>
             <div className="movie-cont">

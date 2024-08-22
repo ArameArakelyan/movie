@@ -8,8 +8,8 @@ function Home() {
     return(
         <main>
             <div className="movie-cont">
-                {data.map((movie)=>{
-                    return (<Box movie={movie}/>)
+                {data.map((movie,id)=>{
+                    return (<Box movie={movie} key={id}/>)
                 })}
             </div>
         </main>
