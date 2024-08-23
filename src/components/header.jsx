@@ -1,17 +1,13 @@
-import React, { useContext, useState } from "react";
+import React, {useState } from "react";
 import "../App.css"
 import { Link } from "react-router-dom";
-import { api_key, main_url } from "../lib";
-import { SearchContext } from "../use";
-
 
 function Header() {
     const [value, setValue] = useState("")
-    const {search, setSearch} = useContext(SearchContext)
+
 
     function submitfunc(e) {
         e.preventDefault()
-        setSearch(main_url +"/search/movie?" +api_key +"&query="+ value)
         setValue("")
     }
 
