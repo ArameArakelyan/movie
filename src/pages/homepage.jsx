@@ -4,11 +4,16 @@ import "../App.css"
 import Box from "../components/box";
 
 function Home() {
-    const {data} = useFetch(api_url,"GET")
+    const data = useFetch(api_url,"GET")
+    let movies = []
+  if (Object.keys(data).length!==0) {
+    movies = [...data.results]
+   } 
+    
     return(
         <main>
             <div className="movie-cont">
-                {data.map((movie,id)=>{
+                {movies.map((movie,id)=>{
                     return (<Box movie={movie} key={id}/>)
                 })}
             </div>

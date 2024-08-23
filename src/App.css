@@ -42,3 +42,31 @@ main{
 .mov-pic{
     width: 250px;
 }
+
+.profile-cont{
+    width: 100%;
+}
+.card{
+    width: 100%;
+    position: relative;
+}
+
+.back-pic{
+    width: 100%;
+}
+
+.movie-info{
+    display: flex;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+.text{
+    width: 600px;
+    margin-left: 100px;
+    padding: 30px;
+    background-color: rgba(96, 90, 90, 0.374);
+}
+.prof-pic{
+    width: 250px;
+}

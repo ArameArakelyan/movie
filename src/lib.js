@@ -7,20 +7,20 @@ export const img_url = "https://image.tmdb.org/t/p/w500";
 export const searchUrl = main_url + "/search/movie?" + api_key;
 
 function useFetch(url_fetch, method_fetch) {
-    const [data, setData] = useState([])
+    const [data, setData] = useState({})
     useEffect(()=>{
         async function fetching(url, method) {
             try {
                 const response = await fetch(url, { method });
                 const json = await response.json();
-                setData(json.results)
+                setData(json)
             } catch (error) {
                 return console.error("Error:", error);
             }
         }
         fetching(url_fetch, method_fetch)
     },[url_fetch, method_fetch])
-    return {data}
+    return data
 }
 
 export default useFetch

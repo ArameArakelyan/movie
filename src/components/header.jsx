@@ -14,12 +14,12 @@ function Header() {
     return (
         <header className="header">
             <div className="header-cont">
-                <div className="logo">
-                    <h2 className="logotext">Movie</h2>
+                <div style={{color:"red"}} className="logo">
+                    <Link to={`/`}><h1 className="logotext">Movie</h1></Link>
                 </div>
-                <form onSubmit={submitfunc} action="">
+                <form onSubmit={submitfunc}>
                     <input type="text" value={value} onChange={(e) => setValue(e.target.value)} placeholder="Search..." />
-                    <Link to={`/search/${value}`}><button type="submit">Search</button></Link>
+                    <Link to={`/search/${value}`}><button>Search</button></Link>
                 </form>
             </div>
         </header>

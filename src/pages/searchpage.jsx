@@ -6,15 +6,19 @@ import { useParams } from "react-router-dom";
 
 
 function Search() {
-    const {searchtext} = useParams()
-    const search = main_url +"/search/movie?" +api_key +"&query="+searchtext
-    const {data} = useFetch(search,"GET")
 
-    return(
+    const { searchtext } = useParams()
+    const searchurl = main_url + "/search/movie?" + api_key + "&query=" + searchtext
+    const data = useFetch(searchurl, "GET")
+    let movies = []
+    if (Object.keys(data).length !== 0) {
+        movies = [...data.results]
+    }
+    return (
         <main>
             <div className="movie-cont">
-                {data.map((movie)=>{
-                    return (<Box key={movie.id} movie={movie}/>)
+                {movies.map((movie) => {
+                    return (<Box key={movie.id} movie={movie} />)
                 })}
             </div>
         </main>
