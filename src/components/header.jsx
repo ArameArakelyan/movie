@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
     const [value, setValue] = useState("")
-
+    // const [search, setSearch] = useState("")
 
     function submitfunc(e) {
         e.preventDefault()

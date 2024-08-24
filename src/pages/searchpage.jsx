@@ -14,6 +14,7 @@ function Search() {
     if (Object.keys(data).length !== 0) {
         movies = [...data.results]
     }
+    
     return (
         <main>
             <div className="movie-cont">

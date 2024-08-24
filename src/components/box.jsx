@@ -6,7 +6,7 @@ function Box({movie}) {
     return(
         <Link to={`/movie/${movie.id}`}>
         <div className="box">
-            <img className="mov-pic" src={img_url+ movie.poster_path}/>
+            <img className="mov-pic" src={img_url+ movie.poster_path} alt=""/>
         </div>
         </Link>
     )    

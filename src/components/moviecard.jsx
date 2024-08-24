@@ -4,7 +4,7 @@ import { img_url } from "../lib";
 function Card({data}) {
     return( 
         <div className="card">
-            <img className="back-pic" src={img_url+ data.backdrop_path} />
+            <img className="back-pic" src={img_url+ data.backdrop_path} alt="" />
             <div className="movie-info">
                 <div>
                 <img className="prof-pic" src={img_url+ data.poster_path} alt="" />
