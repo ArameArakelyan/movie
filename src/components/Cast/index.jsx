@@ -1,5 +1,6 @@
 import React from "react";
-import { img_url } from "../lib";
+import { img_url } from "../../lib";
+
 
 function Cast({act}) {
     return(

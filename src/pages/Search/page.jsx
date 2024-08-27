@@ -1,7 +1,7 @@
 import React from "react";
-import useFetch, { api_key, main_url } from "../lib";
-import "../App.css"
-import Box from "../components/box";
+import useFetch, { api_key, main_url } from "../../lib";
+import "../../App.css"
+import Box from "../../components/Box/index";
 import { useParams } from "react-router-dom";
 
 
