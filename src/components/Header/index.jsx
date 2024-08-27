@@ -11,6 +11,7 @@ function Header() {
         e.stopPropagation();
         setValue("")
         navigate(`/search/${value}`)
+        showMenu()
     }
 
     const [show, setShow]= useState(false)
@@ -21,7 +22,7 @@ function Header() {
         <header className="header">
             <div className="header-cont">
                 <div style={{padding:"10px 0"}} className="logo">
-                    <Link style={{textDecoration:"none", color:"#f5c518"}} to={`/`}><h1 className="logotext">MovieHD</h1></Link>
+                    <Link onClick={showMenu}  style={{textDecoration:"none", color:"#f5c518"}} to={`/`}><h1 className="logotext">MovieHD</h1></Link>
                 </div>
 
                 <div className="menu" onClick={showMenu}>
